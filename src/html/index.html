@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../css/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/input.css" />
+</head>
+
+<body>
+  <!-- Section Header -->
+  <header class="bg-white absolute top-0 left-0 right-0 z-50">
+    <nav class="px-4 py-2 flex items-center justify-between w-full">
+      <div>
+        <img width="100" src="../assets/logo.svg" alt="BLUD" />
+      </div>
+      <div>
+        <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+          <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+          <span class="hamburger-line transition duration-300 ease-in-out"></span>
+          <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+        </button>
+
+        <div id="sidebar"
+          class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300">
+          <div class="p-4 border-b flex justify-between items-center">
+            <span class="text-lg font-bold">Menu</span>
+            <button id="closeBtn" class="text-gray-700 text-xl">
+              &times;
+            </button>
+          </div>
+          <ul class="p-4 space-y-2">
+            <li>
+              <a href="#" class="block p-2 bg-blue-200 rounded">Home</a>
+            </li>
+            <li>
+              <a href="objek_wisata.html" class="block p-2 hover:bg-gray-100">Objek Wisata</a>
+            </li>
+            <li>
+              <a href="jadwal_booking.html" class="block p-2 hover:bg-gray-100">Jadwal</a>
+            </li>
+            <li>
+              <a href="login.html" class="block p-2 hover:bg-gray-100">Masuk/Daftar</a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div
+            id="nav-menu"
+            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none">
+            <ul class="block lg:flex lg:items-center">
+              <li class="group">
+                <a
+                  href="index.html"
+                  class="mx-8 flex py-2 text-base font-bold text-dark group-hover:text-primary"
+                  >Home</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  href="#jadwal"
+                  class="mx-8 flex py-2 text-base font-bold text-dark group-hover:text-primary"
+                  >Jadwal</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  href="objek_wisata.html"
+                  class="mx-8 flex py-2 text-base font-bold text-dark group-hover:text-primary"
+                  >Objek Wisata</a
+                >
+              </li>
+            </ul>
+          </div> -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="relative mt-12">
+    <img class="bg-cover bg-black bg-blend-darken opacity-70 w-full object-cover" src="../assets/img/bg-hero.png"
+      alt="" />
+    <div class="h-[150px] absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-[10px] font-semibold text-white">Selamat Datang,</h1>
+        <p class="text-xs font-bold text-white">
+          Bersama BLUD Pariwisata, Eksplorasi Banyumas Lebih Dekat!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Profile -->
+  <section class="py-6 px-3">
+    <div>
+      <h1 class="bg-primary mx-auto w-max text-center px-8 py-2 rounded-2xl uppercase text-white font-bold text-base">
+        Profile Blud
+      </h1>
+    </div>
+    <div class="pt-6 flex items-center justify-between gap-4">
+      <img src="../assets/img/profil.png" alt="Profile" />
+      <div>
+        <h2 class="text-xs font-bold text-dark">Badan Layanan Umum Daerah</h2>
+        <p class="pt-2 text-[10px] text-dark text-justify">
+          BLUD Pariwisata adalah Badan Layanan Umum Daerah yang bergerak di
+          bidang pariwisata. BLUD Pariwisata memiliki tujuan untuk
+          mengembangkan potensi pariwisata di Kabupaten Banyumas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Berita -->
+  <section class="py-6 px-3">
+    <div>
+      <h1 class="bg-primary mx-auto w-max text-center px-8 py-2 rounded-2xl uppercase text-white font-bold text-base">
+        Kabar Banyumas
+      </h1>
+      <div class="card">
+        <img class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg" alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Berita Pertama</h2>
+          <p class="text-justify pt-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+            eveniet repellendus ea nesciunt illum nobis sint necessitatibus
+            enim dolores accusantium, incidunt voluptatem doloribus debitis
+            minima cumque quis id eum inventore.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg" alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Berita Kedua</h2>
+          <p class="text-justify pt-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+            eveniet repellendus ea nesciunt illum nobis sint necessitatibus
+            enim dolores accusantium, incidunt voluptatem doloribus debitis
+            minima cumque quis id eum inventore.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Footer -->
+  <footer>
+    <div class="bg-slate-100 py-4 px-8">
+      <div>
+        <img src="../assets/logo.svg" alt="BLUD" />
+      </div>
+      <div class="text-primary py-4 flex justify-between flex-wrap gap-4">
+        <div class="flex flex-col gap-2">
+          <h2 class="font-bold text-xl">Link Terkait</h2>
+          <p class="font-semibold text-base"><a href="">Home</a></p>
+          <p class="font-semibold text-base">
+            <a href="objek_wisata.html">Objek Wisata</a>
+          </p>
+          <p class="font-semibold text-base"><a href="">Jadwal</a></p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="font-bold text-xl">Alamat</h2>
+          <div class="flex items-start gap-2">
+            <img class="text-primary" src="../assets/location.svg" alt="" />
+            <p class="font-semibold text-xs text-justify max-w-[150px]">
+              Kantor BLUD Pariwisata Baturraden Glempang, Bancarkembar,
+              Purwokerto Utara, Banyumas, 53121
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="font-bold text-xl">Social Media</h2>
+          <div class="flex items-center gap-2">
+            <img class="text-primary" src="../assets/wa.svg" alt="" />
+            <p class="font-semibold text-xs">0867-0987-9987</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <img class="text-primary" src="../assets/instagram.svg" alt="" />
+            <p class="font-semibold text-xs">BLUD Pariwisata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary p-4 text-center">
+      <p class="text-white font-semibold">
+        Copyright© BLUDPariwisata, All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/index.js"></script>
+</body>
+
+</html>

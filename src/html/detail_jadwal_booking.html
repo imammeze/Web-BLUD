@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/input.css" />
+</head>
+
+<body>
+    <!-- Section Header -->
+    <header class="bg-white absolute top-0 left-0 right-0 z-50">
+        <nav class="px-4 py-2 flex items-center justify-between w-full">
+            <div>
+                <img width="100" src="../assets/logo.svg" alt="BLUD" />
+            </div>
+            <div>
+                <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+                    <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                    <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+                </button>
+                <div id="sidebar"
+                    class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300">
+                    <div class="p-4 border-b flex justify-between items-center">
+                        <span class="text-lg font-bold">Menu</span>
+                        <button id="closeBtn" class="text-gray-700 text-xl">
+                            &times;
+                        </button>
+                    </div>
+                    <ul class="p-4 space-y-2">
+                        <li>
+                            <a href="index.html" class="block p-2 hover:bg-gray-100">Home</a>
+                        </li>
+                        <li>
+                            <a href="objek_wisata.html" class="block p-2 hover:bg-gray-100">Objek Wisata</a>
+                        </li>
+                        <li>
+                            <a href="jadwal_booking.html" class="block p-2 bg-blue-200 rounded">Jadwal</a>
+                        </li>
+                        <li>
+                            <a href="login.html" class="block p-2 hover:bg-gray-100">Masuk/Daftar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Booking -->
+    <section class="py-[60px] px-6">
+        <div>
+            <h1
+                class="bg-primary mx-auto w-max text-center mb-12 mt-10 px-8 py-2 rounded-2xl uppercase text-white font-bold text-base">
+                Jadwal Booking
+            </h1>
+            <h2 class="text-center font-semibold text-xl">Januari</h2>
+        </div>
+        <!-- List Jadwal -->
+        <div class="pt-10">
+            <div
+                class="relative bg-white w-full px-4 pt-10 pb-8 mb-12 border border-slate-400 border-solid rounded-lg my-4">
+                <h1
+                    class="absolute left-[-1px] top-[-30px] font-bold text-sm bg-primary w-max py-4 px-8 text-white rounded-xl">
+                    25-27 Januari 2025
+                </h1>
+                <div class="flex flex-col gap-4">
+                    <h1 class="font-semibold text-lg">Telkom University</h1>
+                    <p class="text-xs text-justify">Event tahunan Dies Natalis Telkom University Purwokerto dan Bazar
+                        Pameran Produk
+                        UMKM</p>
+                    <div class="flex items-center gap-4">
+                        <img width="25" src="../assets/pdf.svg" alt="">
+                        <a href="">
+                            <p class="text-xs">Lihat Rundown</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="relative bg-white w-full px-4 pt-10 pb-8 mb-12 border border-slate-400 border-solid rounded-lg my-4">
+                <h1
+                    class="absolute left-[-1px] top-[-30px] font-bold text-sm bg-primary w-max py-4 px-8 text-white rounded-xl">
+                    25-27 Januari 2025
+                </h1>
+                <div class="flex flex-col gap-4">
+                    <h1 class="font-semibold text-lg">Telkom University</h1>
+                    <p class="text-xs text-justify">Event tahunan Dies Natalis Telkom University Purwokerto dan Bazar
+                        Pameran Produk
+                        UMKM</p>
+                    <div class="flex items-center gap-4">
+                        <img width="25" src="../assets/pdf.svg" alt="">
+                        <a href="">
+                            <p class="text-xs">Lihat Rundown</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="relative bg-white w-full px-4 pt-10 pb-8 mb-12 border border-slate-400 border-solid rounded-lg my-4">
+                <h1
+                    class="absolute left-[-1px] top-[-30px] font-bold text-sm bg-primary w-max py-4 px-8 text-white rounded-xl">
+                    25-27 Januari 2025
+                </h1>
+                <div class="flex flex-col gap-4">
+                    <h1 class="font-semibold text-lg">Telkom University</h1>
+                    <p class="text-xs text-justify">Event tahunan Dies Natalis Telkom University Purwokerto dan Bazar
+                        Pameran Produk
+                        UMKM</p>
+                    <div class="flex items-center gap-4">
+                        <img width="25" src="../assets/pdf.svg" alt="">
+                        <a href="">
+                            <p class="text-xs">Lihat Rundown</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Footer -->
+    <footer>
+        <div class="bg-slate-100 py-4 px-8">
+            <div>
+                <img src="../assets/logo.svg" alt="BLUD" />
+            </div>
+            <div class="text-primary py-4 flex justify-between flex-wrap gap-4">
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-bold text-xl">Link Terkait</h2>
+                    <p class="font-semibold text-base"><a href="">Home</a></p>
+                    <p class="font-semibold text-base">
+                        <a href="objek_wisata.html">Objek Wisata</a>
+                    </p>
+                    <p class="font-semibold text-base"><a href="">Jadwal</a></p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-bold text-xl">Alamat</h2>
+                    <div class="flex items-start gap-2">
+                        <img class="text-primary" src="../assets/location.svg" alt="" />
+                        <p class="font-semibold text-xs text-justify max-w-[150px]">
+                            Kantor BLUD Pariwisata Baturraden Glempang, Bancarkembar,
+                            Purwokerto Utara, Banyumas, 53121
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-bold text-xl">Social Media</h2>
+                    <div class="flex items-center gap-2">
+                        <img class="text-primary" src="../assets/wa.svg" alt="" />
+                        <p class="font-semibold text-xs">0867-0987-9987</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img class="text-primary" src="../assets/instagram.svg" alt="" />
+                        <p class="font-semibold text-xs">BLUD Pariwisata</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary p-4 text-center">
+            <p class="text-white font-semibold">
+                Copyright© BLUDPariwisata, All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

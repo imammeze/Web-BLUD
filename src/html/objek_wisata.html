@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/input.css" />
+  </head>
+  <body>
+    <!-- Section Header -->
+    <header class="bg-white absolute top-0 left-0 right-0 z-50">
+      <nav class="px-4 py-2 flex items-center justify-between w-full">
+        <div>
+          <img width="100" src="../assets/logo.svg" alt="BLUD" />
+        </div>
+        <div>
+          <button
+            id="hamburger"
+            name="hamburger"
+            type="button"
+            class="block lg:hidden">
+            <span
+              class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+            <span
+              class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span
+              class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+          </button>
+          <div
+            id="sidebar"
+            class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300">
+            <div class="p-4 border-b flex justify-between items-center">
+              <span class="text-lg font-bold">Menu</span>
+              <button id="closeBtn" class="text-gray-700 text-xl">
+                &times;
+              </button>
+            </div>
+            <ul class="p-4 space-y-2">
+              <li>
+                <a href="index.html" class="block p-2 hover:bg-gray-100 ">Home</a>
+              </li>
+              <li>
+                <a href="objek_wisata.html" class="block p-2 bg-blue-200 rounded"
+                  >Objek Wisata</a
+                >
+              </li>
+              <li>
+                <a href="jadwal_booking.html" class="block p-2 hover:bg-gray-100"
+                  >Jadwal</a
+                >
+              </li>
+              <li>
+                <a href="login.html" class="block p-2 hover:bg-gray-100"
+                  >Masuk/Daftar</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- <div
+            id="nav-menu"
+            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none">
+            <ul class="block lg:flex lg:items-center">
+              <li class="group">
+                <a
+                  href="index.html"
+                  class="mx-8 flex py-2 text-base font-bold text-dark group-hover:text-primary"
+                  >Home</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  href="#jadwal"
+                  class="mx-8 flex py-2 text-base font-bold text-dark group-hover:text-primary"
+                  >Jadwal</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  href="objek_wisata.html"
+                  class="mx-8 flex py-2 text-base font-bold text-dark group-hover:text-primary"
+                  >Objek Wisata</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div> -->
+      </nav>
+    </header>
+
+    <!-- Section Objek Wisata -->
+    <section class="mt-[60px] mb-[30px]">
+      <!-- Tittle -->
+      <div>
+        <h1
+          class="bg-primary mx-auto w-max text-center px-8 py-2 rounded-2xl uppercase text-white font-bold text-base">
+          Objek Wisata
+        </h1>
+      </div>
+
+      <!-- Search Button -->
+      <section class="flex justify-center p-6">
+        <!-- Search -->
+        <div class="w-[300px] h-auto bg-slate-100 p-3 rounded-2xl">
+          <section class="w-full h-10 flex items-center gap-2">
+            <span class="w-10 h-full flex items-center">
+              <img src="../assets/search.svg" alt="Search" />
+            </span>
+            <input
+              type="text"
+              class="w-full h-full font-medium focus:outline-none"
+              placeholder="Cari Tempat Wisata" />
+          </section>
+        </div>
+      </section>
+
+      <!-- Section List Objek Wisata -->
+      <div class="card">
+        <img
+          class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg"
+          alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Menara Teratai</h2>
+          <div class="flex items-center gap-2 py-4">
+            <img src="../assets/location.svg" alt="Location" />
+            <p class="font-semibold">Kedungwuluh, Purwokerto Barat.</p>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-primary text-white font-bold py-2 px-4 rounded-lg">
+              <a href="detail_objek_wisata.html">Lihat Detail</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg"
+          alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Taman Apung Maskemambang</h2>
+          <div class="flex items-center gap-2 py-4">
+            <img src="../assets/location.svg" alt="Location" />
+            <p class="font-semibold">Bancarkembar, Purwokerto Utara.</p>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-primary text-white font-bold py-2 px-4 rounded-lg">
+              <a href="detail_objek_wisata.html">Lihat Detail</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg"
+          alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Madhang Maning Park</h2>
+          <div class="flex items-center gap-2 py-4">
+            <img src="../assets/location.svg" alt="Location" />
+            <p class="font-semibold">Kedungwuluh, Purwokerto Barat.</p>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-primary text-white font-bold py-2 px-4 rounded-lg">
+              <a href="detail_objek_wisata.html">Lihat Detail</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg"
+          alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Indraprana</h2>
+          <div class="flex items-center gap-2 py-4">
+            <img src="../assets/location.svg" alt="Location" />
+            <p class="font-semibold">Bancarkembar, Purwokerto Utara.</p>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-primary text-white font-bold py-2 px-4 rounded-lg">
+              <a href="detail_objek_wisata.html">Lihat Detail</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg"
+          alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Lokawisata Baturaden</h2>
+          <div class="flex items-center gap-2 py-4">
+            <img src="../assets/location.svg" alt="Location" />
+            <p class="font-semibold">Karangmangu, Baturaden.</p>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-primary text-white font-bold py-2 px-4 rounded-lg">
+              <a href="detail_objek_wisata.html">Lihat Detail</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg"
+          alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Taman Botani</h2>
+          <div class="flex items-center gap-2 py-4">
+            <img src="../assets/location.svg" alt="Location" />
+            <p class="font-semibold">Karangmangu, Baturaden.</p>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-primary text-white font-bold py-2 px-4 rounded-lg">
+              <a href="detail_objek_wisata.html">Lihat Detail</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="w-full h-full rounded-t-lg object-cover lg:h-[250px] lg:object-fill"
+          src="../assets/img/berita1.jpeg"
+          alt="" />
+        <div class="p-5 flex-col gap-4">
+          <h2 class="font-bold text-xl">Bukit Bintang</h2>
+          <div class="flex items-center gap-2 py-4">
+            <img src="../assets/location.svg" alt="Location" />
+            <p class="font-semibold">Kemutug Lor, Baturaden.</p>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-primary text-white font-bold py-2 px-4 rounded-lg">
+              <a href="detail_objek_wisata.html">Lihat Detail</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="" download></a>
+    <!-- Section Footer -->
+    <footer>
+      <div class="bg-slate-100 py-4 px-8">
+        <div>
+          <img src="../assets/logo.svg" alt="BLUD" />
+        </div>
+        <div class="text-primary py-4 flex justify-between flex-wrap gap-4">
+          <div class="flex flex-col gap-2">
+            <h2 class="font-bold text-xl">Link Terkait</h2>
+            <p class="font-semibold text-base"><a href="">Home</a></p>
+            <p class="font-semibold text-base"><a href="">Objek Wisata</a></p>
+            <p class="font-semibold text-base"><a href="">Jadwal</a></p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h2 class="font-bold text-xl">Alamat</h2>
+            <div class="flex items-start gap-2">
+              <img class="text-primary" src="../assets/location.svg" alt="" />
+              <p class="font-semibold text-xs text-justify max-w-[150px]">
+                Kantor BLUD Pariwisata Baturraden Glempang, Bancarkembar,
+                Purwokerto Utara, Banyumas, 53121
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h2 class="font-bold text-xl">Social Media</h2>
+            <div class="flex items-center gap-2">
+              <img class="text-primary" src="../assets/wa.svg" alt="" />
+              <p class="font-semibold text-xs">0867-0987-9987</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img class="text-primary" src="../assets/instagram.svg" alt="" />
+              <p class="font-semibold text-xs">BLUD Pariwisata</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary p-4 text-center">
+        <p class="text-white font-semibold">
+          Copyright© BLUDPariwisata, All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+  </body>
+</html>
