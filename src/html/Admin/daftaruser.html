@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengguna Umum - BLUD Pariwisata</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-md p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/logo blud.png" alt="Logo" class="h-10 mr-2">
+            </div>
+            <div class="flex items-center">
+                <span class="mr-4 font-medium text-gray-700">Putri Aryta</span>
+                <img src="img/profile.jpg" alt="Profile" class="h-10 w-10 rounded-full border border-gray-300">
+            </div>
+        </header>
+
+        <!-- CONTAINER -->
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <aside class="w-64 bg-white shadow-md flex flex-col min-h-screen">
+                <nav class="mt-4 flex-1">
+                    <ul>
+                        <li class="relative">
+                            <button class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                                <div class="flex items-center">
+                                    <a href="dashboard.html">🏠 Dashboard</a>
+                                </div>
+                            </button>
+                        </li>
+                        
+                        <li class="relative">
+                            <button id="buttonPengguna" onclick="toggleDropdownUser()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                                <div class="flex items-center">
+                                    <span class="mr-3">👤</span> Pengguna
+                                </div>
+                                <img id="arrowUser" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                            </button>
+                            <ul id="dropdownUserMenu" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="daftaradmin.html">Admin</a>
+                                </li>
+                                <li class="px-6 py-2 bg-blue-500 rounded">
+                                    <a href="daftaruser.html">Umum</a>
+                                </li>
+                            </ul>
+                        </li>   
+
+                        <li class="relative">
+                            <button id="buttonEditFitur" onclick="toggleDropdownEditFitur()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                                <div class="flex items-center">
+                                    <span class="mr-3">⚙️</span> Edit Fitur
+                                </div>
+                                <img id="arrowEditFitur" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                            </button>
+                            <ul id="dropdownEditFitur" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="jadwal.html">Jadwal</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="berita.html">Berita</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="tempatwisata.html">Tempat Wisata</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="relative">
+                            <button id="buttonPengajuan" onclick="toggleDropdownPengajuan()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                                <div class="flex items-center">
+                                    <span class="mr-3">📑</span> Pengajuan
+                                </div>
+                                <img id="arrowPengajuan" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                            </button>
+                            <ul id="dropdownPengajuan" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="pengajuanadmin.html">List Pengajuan</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="approvenew.html">Approved</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="rejectpengajuan.html">Rejected</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="flex-1 flex flex-col">
+                <!-- Content -->
+                <main class="p-6 bg-gray-50 flex-1">
+                    <!-- Flex container untuk judul dan search bar -->
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold">Daftar Pengguna Umum</h3>
+                        <input type="text" placeholder="Search..." class="border px-4 py-2 rounded-lg w-64">
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg p-4">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-blue-300 text-white">
+                                    <th class="p-3">No</th>
+                                    <th class="p-3">UserID</th>
+                                    <th class="p-3">Username Account</th>
+                                    <th class="p-3">Activate Date</th>
+                                    <th class="p-3">Identitas Pengguna</th>
+                                    <th class="p-3">Status</th>
+                                    <th class="p-3">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-3 text-center">1</td>
+                                    <td class="p-3 text-center">RD11</td>
+                                    <td class="p-3">Raisya Diva</td>
+                                    <td class="p-3 text-center">10/01/2025</td>
+                                    <td class="p-3">
+                                        <span class="font-semibold">Nama:</span> Raisya Diva Lestari <br>
+                                        <span class="font-semibold">Email:</span> raisyaprat12@gmail.com <br>
+                                        <span class="font-semibold">No. Hp:</span> +62800785467
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="bg-yellow-300 text-black px-3 py-1 rounded-full text-sm">Waiting</span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button 
+                                                class="bg-green-500 text-white px-3 py-1 rounded-lg edit-btn" 
+                                                data-id="RD11" 
+                                                data-name="Raisya Diva Lestari" 
+                                                data-email="raisyaprat12@gmail.com" 
+                                                data-phone="+62800785467">
+                                                ✏ Edit
+                                            </button>
+                                            <button class="bg-red-500 text-white px-3 py-1 rounded-lg delete-btn">🗑 Delete</button>
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3 text-center">2</td>
+                                    <td class="p-3 text-center">FD21</td>
+                                    <td class="p-3">Fadyana</td>
+                                    <td class="p-3 text-center">07/01/2025</td>
+                                    <td class="p-3">
+                                        <span class="font-semibold">Nama:</span> Fadyra Niara <br>
+                                        <span class="font-semibold">Email:</span> dyanara12@gmail.com <br>
+                                        <span class="font-semibold">No. Hp:</span> +62800785467
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <span class="bg-green-400 text-white px-3 py-1 rounded-full text-sm">Verified</span>
+                                    </td>
+                                    <td class="p-3 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button 
+                                                class="bg-green-500 text-white px-3 py-1 rounded-lg edit-btn" 
+                                                data-id="FD21" 
+                                                data-name="Fadyra Niara" 
+                                                data-email="dyanara12@gmail.com" 
+                                                data-phone="+62800785467">
+                                                ✏ Edit
+                                            </button>
+                                            <button class="bg-red-500 text-white px-3 py-1 rounded-lg delete-btn">🗑 Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Popup Konfirmasi Delete -->
+                                <div id="deleteModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+                                    <div class="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+                                        <p class="text-lg font-semibold mb-4">Anda yakin hapus pengguna?</p>
+                                        <div class="flex justify-center space-x-4">
+                                            <button id="cancelDelete" class="bg-gray-400 text-white px-4 py-2 rounded-lg">Tidak</button>
+                                            <button id="confirmDelete" class="bg-red-500 text-white px-4 py-2 rounded-lg">Ya</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Popup Edit -->
+                    <div id="editModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+                        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+                            <h2 class="text-lg font-semibold mb-4">Edit Data Pengguna</h2>
+                            
+                            <label class="block text-sm font-medium">Nama User</label>
+                            <input type="text" id="editName" class="w-full border rounded-lg px-3 py-2 mb-2">
+                            
+                            <label class="block text-sm font-medium">Email</label>
+                            <input type="email" id="editEmail" class="w-full border rounded-lg px-3 py-2 mb-2">
+                            
+                            <label class="block text-sm font-medium">No Telepon</label>
+                            <input type="text" id="editPhone" class="w-full border rounded-lg px-3 py-2 mb-4">
+                            
+                            <div class="flex justify-end space-x-2">
+                                <button id="cancelEdit" class="bg-gray-400 text-white px-4 py-2 rounded-lg">Batal</button>
+                                <button id="saveEdit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Footer -->
+                <footer class="bg-white p-4 text-center text-sm text-gray-500">
+                    Copyright © BLUD Pariwisata, All rights reserved.
+                </footer>
+            </div>
+        </div>
+    </div>
+
+     <!-- JavaScript untuk Dropdown -->
+    <script>
+        function toggleDropdownUser() {
+            const menu = document.getElementById("dropdownUserMenu");
+            const arrow = document.getElementById("arrowUser");
+    
+        // Pastikan hanya menutup dropdown lain
+        closeAllDropdowns("dropdownUserMenu");
+    
+        menu.classList.toggle("hidden");
+        arrow.classList.toggle("rotate-180");
+        }
+    
+        // Menutup dropdown jika klik di luar elemen dropdown
+        document.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("dropdownUserMenu");
+            const button = document.getElementById("buttonPengguna");
+            const arrow = document.getElementById("arrowUser");
+    
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add("hidden");
+            arrow.classList.remove("rotate-180");
+        }
+        });
+    
+        // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+        document.querySelectorAll("#dropdownUserMenu li").forEach(item => {
+            item.addEventListener("click", function() {
+                const targetPage = this.getAttribute("data-href");
+            if (targetPage) {
+                window.location.href = targetPage; // Navigasi ke halaman
+            }
+        });
+        });
+    
+        // Fungsi toggle dropdown Pengajuan
+        function toggleDropdownPengajuan() {
+            const menu = document.getElementById("dropdownPengajuan");
+            const arrow = document.getElementById("arrowPengajuan");
+    
+            closeAllDropdowns("dropdownPengajuan");
+    
+            menu.classList.toggle("hidden");
+            arrow.classList.toggle("rotate-180");
+        }
+    
+    // Menutup dropdown jika klik di luar elemen dropdown
+        document.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("dropdownPengajuan");
+            const button = document.getElementById("buttonPengajuan");
+            const arrow = document.getElementById("arrowPengajuan");
+    
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add("hidden");
+            arrow.classList.remove("rotate-180");
+        }
+    });
+    
+    // Fungsi menutup dropdown lain sebelum membuka dropdown yang baru
+        function closeAllDropdowns(exceptId) {
+            const dropdowns = {
+            "dropdownUserMenu": "arrowUser",
+            "dropdownPengajuan": "arrowPengajuan"
+        };
+    
+        Object.keys(dropdowns).forEach((id) => {
+            if (id !== exceptId) {
+                const menu = document.getElementById(id);
+                const arrow = document.getElementById(dropdowns[id]);
+    
+                if (menu && !menu.classList.contains("hidden")) {
+                    menu.classList.add("hidden");
+                    arrow.classList.remove("rotate-180");
+                }
+            }
+        });
+    }
+    
+    // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+        document.querySelectorAll("#dropdownPengajuan li").forEach(item => {
+            item.addEventListener("click", function() {
+                const targetPage = this.getAttribute("data-href");
+            if (targetPage) {
+                window.location.href = targetPage; // Navigasi ke halaman
+            }
+        });
+        });
+
+    //action edit
+            document.addEventListener("DOMContentLoaded", function () {
+            const editButtons = document.querySelectorAll(".edit-btn");
+            const editModal = document.getElementById("editModal");
+            const cancelEdit = document.getElementById("cancelEdit");
+            const saveEdit = document.getElementById("saveEdit");
+
+            // Input fields
+            const editName = document.getElementById("editName");
+            const editEmail = document.getElementById("editEmail");
+            const editPhone = document.getElementById("editPhone");
+
+            editButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    // Mengisi input dengan data dari atribut tombol
+                    editName.value = this.getAttribute("data-name");
+                    editEmail.value = this.getAttribute("data-email");
+                    editPhone.value = this.getAttribute("data-phone");
+
+                    // Tampilkan modal
+                    editModal.classList.remove("hidden");
+                });
+            });
+
+            // Tutup modal saat klik batal
+            cancelEdit.addEventListener("click", function () {
+                editModal.classList.add("hidden");
+            });
+
+            // Simpan perubahan (bisa disesuaikan dengan backend atau localStorage)
+            saveEdit.addEventListener("click", function () {
+                alert("Data berhasil diperbarui!");
+                editModal.classList.add("hidden");
+            });
+        });
+
+        //delete action
+        document.addEventListener("DOMContentLoaded", function () {
+            const deleteButtons = document.querySelectorAll(".delete-btn");
+            const deleteModal = document.getElementById("deleteModal");
+            const cancelDelete = document.getElementById("cancelDelete");
+            const confirmDelete = document.getElementById("confirmDelete");
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                deleteModal.classList.remove("hidden"); // Tampilkan modal
+            });
+         });
+
+        cancelDelete.addEventListener("click", function () {
+            deleteModal.classList.add("hidden"); // Tutup modal jika tekan "Tidak"
+        });
+
+        confirmDelete.addEventListener("click", function () {
+            alert("Pengguna berhasil dihapus!"); // Gantilah dengan fungsi backend jika diperlukan
+            deleteModal.classList.add("hidden"); // Tutup modal setelah konfirmasi
+        });
+    });
+
+    //Fungsi dropdown edit fitur
+    function toggleDropdownEditFitur() {
+        const menu = document.getElementById("dropdownEditFitur");
+        const arrow = document.getElementById("arrowEditFitur");
+
+    // Pastikan hanya menutup dropdown lain
+    closeAllDropdowns("dropdownEditFitur");
+
+    menu.classList.toggle("hidden");
+    arrow.classList.toggle("rotate-180");
+    }
+
+    // Menutup dropdown jika klik di luar elemen dropdown
+    document.addEventListener("click", function(event) {
+        const dropdown = document.getElementById("dropdownEditFitur");
+        const button = document.getElementById("buttonEditFitur");
+        const arrow = document.getElementById("arrowEditFitur");
+
+    if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.classList.add("hidden");
+        arrow.classList.remove("rotate-180");
+    }
+    });
+
+    // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+    document.querySelectorAll("#dropdownEditFitur li").forEach(item => {
+        item.addEventListener("click", function() {
+            const targetPage = this.getAttribute("data-href");
+        if (targetPage) {
+            window.location.href = targetPage; // Navigasi ke halaman
+        }
+    });
+    });
+</script>
+
+</body>
+</html>

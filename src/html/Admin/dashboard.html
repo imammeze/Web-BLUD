@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Admin - BLUD Pariwisata</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-md p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/logo blud.png" alt="Logo" class="h-10 mr-2">
+            </div>
+            <div class="flex items-center">
+                <span class="mr-4 font-medium text-gray-700">Putri Aryta</span>
+                <img src="img/profile.jpg" alt="Profile" class="h-10 w-10 rounded-full border border-gray-300">
+            </div>
+        </header>
+
+        <!-- CONTAINER -->
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <aside class="w-64 bg-white shadow-md flex flex-col min-h-screen">
+                <nav class="mt-4 flex-1">
+                    <ul>
+                        <li class="relative bg-blue-500 rounded"">
+                            <button class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                                <div class="flex items-center>
+                                    <a href="dashboard.html">🏠 Dashboard</a>
+                                </div>
+                            </button>
+                        </li>
+                        
+                        <li class="relative">
+                            <button id="buttonPengguna" onclick="toggleDropdownUser()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                                <div class="flex items-center">
+                                    <span class="mr-3">👤</span> Pengguna
+                                </div>
+                                <img id="arrowUser" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                            </button>
+                            <ul id="dropdownUserMenu" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="daftaradmin.html">Admin</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="daftaruser.html">Umum</a>
+                                </li>
+                            </ul>
+                        </li>   
+
+                        <li class="relative">
+                            <button id="buttonEditFitur" onclick="toggleDropdownEditFitur()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                                <div class="flex items-center">
+                                    <span class="mr-3">⚙️</span> Edit Fitur
+                                </div>
+                                <img id="arrowEditFitur" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                            </button>
+                            <ul id="dropdownEditFitur" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="jadwal.html">Jadwal</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="berita.html">Berita</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="tempatwisata.html">Tempat Wisata</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="relative">
+                            <button id="buttonPengajuan" onclick="toggleDropdownPengajuan()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                                <div class="flex items-center">
+                                    <span class="mr-3">📑</span> Pengajuan
+                                </div>
+                                <img id="arrowPengajuan" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                            </button>
+                            <ul id="dropdownPengajuan" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="pengajuanadmin.html">List Pengajuan</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="approvenew.html">Approved</a>
+                                </li>
+                                <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
+                                    <a href="rejectpengajuan.html">Rejected</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="flex-1 flex flex-col">
+                <!-- Bagian Utama -->
+                <main class="p-6 bg-gray-50 flex-1">
+                    <!-- Teks Selamat Datang -->
+                    <h1 class="text-2xl font-bold mb-4">Selamat Datang, Fadiana.</h1>
+
+                    <!-- Grid Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Card 1: Grafik -->
+                        <div class="bg-white p-4 rounded shadow">
+                            <h2 class="text-lg font-semibold mb-2">JANUARI</h2>
+                            <div class="w-full h-40 bg-blue-100 flex items-center justify-center rounded">
+                            <!-- Placeholder untuk grafik -->
+                            <span class="text-blue-600">[Bar Chart]</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Kalender -->
+                        <div class="bg-white p-4 rounded shadow">
+                            <h2 class="text-lg font-semibold mb-2">Januari</h2>
+                            <div class="w-full h-40 bg-blue-50 flex items-center justify-center rounded">
+                            <!-- Placeholder untuk kalender -->
+                            <span class="text-blue-600">[Calendar]</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Aktivitas -->
+                        <div class="bg-[#0096C7] p-4 rounded shadow">
+                            <h2 class="text-lg font-semibold mb-4 text-white">Aktivitas</h2>
+                            <ul class="space-y-2">
+                                <li class="flex justify-between items-center text-white">
+                                    <div class="flex items-center">
+                                        <span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+                                        <span class="font-semibold">Fadiana menambahkan tempat wisata baru.</span>
+                                    </div>
+                                    <span class="text-sm text-white/80">Baru saja.</span>
+                                </li>
+                                <li class="flex justify-between items-center text-white">
+                                    <div class="flex items-center">
+                                        <span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+                                        <span class="font-semibold">Harsa mengedit tempat wisata.</span>
+                                    </div>
+                                    <span class="text-sm text-white/80">2 Menit yang lalu.</span>
+                                </li>
+                                <li class="flex justify-between items-center text-white">
+                                    <div class="flex items-center">
+                                        <span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+                                        <span class="font-semibold">Vina menambahkan berita baru.</span>
+                                    </div>
+                                    <span class="text-sm text-white/80">30 Menit yang lalu.</span>
+                                </li>
+                                <li class="flex justify-between items-center text-white">
+                                    <div class="flex items-center">
+                                        <span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+                                        <span class="font-semibold">Imam menambahkan jadwal event baru.</span>
+                                    </div>
+                                    <span class="text-sm text-white/80">1 Hari yang lalu.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <!-- Card 4: Akun Terdaftar -->
+                        <div class="bg-[#48CAE4] p-4 rounded shadow flex flex-col">
+                            <h2 class="text-lg text-white">Akun terdaftar</h2>
+                            <div class="flex-grow flex items-center justify-center">
+                                <span class="text-5xl font-bold text-white">20</span>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
+                <!-- Footer -->
+                <footer class="bg-white p-4 text-center text-sm text-gray-500">
+                    Copyright © BLUD Pariwisata, All rights reserved.
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk Dropdown -->
+    <script>
+        function toggleDropdownUser() {
+            const menu = document.getElementById("dropdownUserMenu");
+            const arrow = document.getElementById("arrowUser");
+    
+        // Pastikan hanya menutup dropdown lain
+        closeAllDropdowns("dropdownUserMenu");
+    
+        menu.classList.toggle("hidden");
+        arrow.classList.toggle("rotate-180");
+        }
+    
+        // Menutup dropdown jika klik di luar elemen dropdown
+        document.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("dropdownUserMenu");
+            const button = document.getElementById("buttonPengguna");
+            const arrow = document.getElementById("arrowUser");
+    
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add("hidden");
+            arrow.classList.remove("rotate-180");
+        }
+        });
+    
+        // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+        document.querySelectorAll("#dropdownUserMenu li").forEach(item => {
+            item.addEventListener("click", function() {
+                const targetPage = this.getAttribute("data-href");
+            if (targetPage) {
+                window.location.href = targetPage; // Navigasi ke halaman
+            }
+        });
+        });
+    
+        // Fungsi toggle dropdown Pengajuan
+        function toggleDropdownPengajuan() {
+            const menu = document.getElementById("dropdownPengajuan");
+            const arrow = document.getElementById("arrowPengajuan");
+    
+            closeAllDropdowns("dropdownPengajuan");
+    
+            menu.classList.toggle("hidden");
+            arrow.classList.toggle("rotate-180");
+        }
+    
+    // Menutup dropdown jika klik di luar elemen dropdown
+        document.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("dropdownPengajuan");
+            const button = document.getElementById("buttonPengajuan");
+            const arrow = document.getElementById("arrowPengajuan");
+    
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add("hidden");
+            arrow.classList.remove("rotate-180");
+        }
+    });
+    
+    // Fungsi menutup dropdown lain sebelum membuka dropdown yang baru
+        function closeAllDropdowns(exceptId) {
+            const dropdowns = {
+            "dropdownUserMenu": "arrowUser",
+            "dropdownPengajuan": "arrowPengajuan"
+        };
+    
+        Object.keys(dropdowns).forEach((id) => {
+            if (id !== exceptId) {
+                const menu = document.getElementById(id);
+                const arrow = document.getElementById(dropdowns[id]);
+    
+                if (menu && !menu.classList.contains("hidden")) {
+                    menu.classList.add("hidden");
+                    arrow.classList.remove("rotate-180");
+                }
+            }
+        });
+    }
+    
+    // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+        document.querySelectorAll("#dropdownPengajuan li").forEach(item => {
+            item.addEventListener("click", function() {
+                const targetPage = this.getAttribute("data-href");
+            if (targetPage) {
+                window.location.href = targetPage; // Navigasi ke halaman
+            }
+        });
+        });
+
+    //Fungsi toggle dropdown edit fitur
+    function toggleDropdownEditFitur() {
+        const menu = document.getElementById("dropdownEditFitur");
+        const arrow = document.getElementById("arrowEditFitur");
+
+    // Pastikan hanya menutup dropdown lain
+    closeAllDropdowns("dropdownEditFitur");
+
+    menu.classList.toggle("hidden");
+    arrow.classList.toggle("rotate-180");
+    }
+
+    // Menutup dropdown jika klik di luar elemen dropdown
+    document.addEventListener("click", function(event) {
+        const dropdown = document.getElementById("dropdownEditFitur");
+        const button = document.getElementById("buttonEditFitur");
+        const arrow = document.getElementById("arrowEditFitur");
+
+    if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.classList.add("hidden");
+        arrow.classList.remove("rotate-180");
+    }
+    });
+
+    // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+    document.querySelectorAll("#dropdownEditFitur li").forEach(item => {
+        item.addEventListener("click", function() {
+            const targetPage = this.getAttribute("data-href");
+        if (targetPage) {
+            window.location.href = targetPage; // Navigasi ke halaman
+        }
+    });
+    });
+
+    </script>
+</body>
