@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengajuan-BLUD Pariwisata</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100">
     <div class="flex flex-col h-screen">
         <!-- Header -->
@@ -27,18 +29,20 @@
                     <ul>
                         <li class="relative hover:bg-blue-100 cursor-pointer">
                             <button class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
-                                <div class="flex items-center>
+                                <div class="flex items-center">
                                     <a href="dashboard.html">🏠 Dashboard</a>
                                 </div>
                             </button>
                         </li>
-                        
+
                         <li class="relative">
-                            <button id="buttonPengguna" onclick="toggleDropdownUser()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                            <button id="buttonPengguna" onclick="toggleDropdownUser()"
+                                class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
                                 <div class="flex items-center">
                                     <span class="mr-3">👤</span> Pengguna
                                 </div>
-                                <img id="arrowUser" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                                <img id="arrowUser" src="img/dropdownimg.png" alt="Dropdown Icon"
+                                    class="w-4 h-4 transition-transform duration-300">
                             </button>
                             <ul id="dropdownUserMenu" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
                                 <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
@@ -48,14 +52,16 @@
                                     <a href="daftaruser.html">Umum</a>
                                 </li>
                             </ul>
-                        </li>   
+                        </li>
 
                         <li class="relative">
-                            <button id="buttonEditFitur" onclick="toggleDropdownEditFitur()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                            <button id="buttonEditFitur" onclick="toggleDropdownEditFitur()"
+                                class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
                                 <div class="flex items-center">
                                     <span class="mr-3">⚙️</span> Edit Fitur
                                 </div>
-                                <img id="arrowEditFitur" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                                <img id="arrowEditFitur" src="img/dropdownimg.png" alt="Dropdown Icon"
+                                    class="w-4 h-4 transition-transform duration-300">
                             </button>
                             <ul id="dropdownEditFitur" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
                                 <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
@@ -71,11 +77,13 @@
                         </li>
 
                         <li class="relative">
-                            <button id="buttonPengajuan" onclick="toggleDropdownPengajuan()" class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
+                            <button id="buttonPengajuan" onclick="toggleDropdownPengajuan()"
+                                class="w-full flex justify-between items-center px-6 py-3 hover:bg-blue-100">
                                 <div class="flex items-center">
                                     <span class="mr-3">📑</span> Pengajuan
                                 </div>
-                                <img id="arrowPengajuan" src="img/dropdownimg.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                                <img id="arrowPengajuan" src="img/dropdownimg.png" alt="Dropdown Icon"
+                                    class="w-4 h-4 transition-transform duration-300">
                             </button>
                             <ul id="dropdownPengajuan" class="ml-6 mt-1 text-sm hidden bg-white shadow-md rounded-md">
                                 <li class="px-6 py-2 hover:bg-blue-100 cursor-pointer">
@@ -92,7 +100,7 @@
                     </ul>
                 </nav>
             </aside>
-            
+
             <!-- Main Content -->
             <div class="flex-1 flex flex-col">
                 <!-- Content -->
@@ -131,7 +139,7 @@
                                         <div class="flex justify-center space-x-4">
                                             <button class="bg-red-500 text-white px-3 py-1 rounded-lg">Reject</button>
                                         </div>
-                                    </td>                    
+                                    </td>
                                 </tr>
                                 <tr class="border-b">
                                     <td class="p-3 text-center">2</td>
@@ -164,14 +172,14 @@
                                     </td>
                                 </tr>
                             </tbody>
-                            
+
                         </table>
                     </div>
                 </main>
 
                 <!-- Footer -->
                 <footer class="bg-white p-4 text-center text-sm text-gray-500">
-                Copyright © BLUD Pariwisata, All rights reserved.
+                    Copyright © BLUD Pariwisata, All rights reserved.
                 </footer>
             </div>
         </div>
@@ -181,123 +189,124 @@
         function toggleDropdownUser() {
             const menu = document.getElementById("dropdownUserMenu");
             const arrow = document.getElementById("arrowUser");
-    
-        // Pastikan hanya menutup dropdown lain
-        closeAllDropdowns("dropdownUserMenu");
-    
-        menu.classList.toggle("hidden");
-        arrow.classList.toggle("rotate-180");
+
+            // Pastikan hanya menutup dropdown lain
+            closeAllDropdowns("dropdownUserMenu");
+
+            menu.classList.toggle("hidden");
+            arrow.classList.toggle("rotate-180");
         }
-    
+
         // Menutup dropdown jika klik di luar elemen dropdown
-        document.addEventListener("click", function(event) {
+        document.addEventListener("click", function (event) {
             const dropdown = document.getElementById("dropdownUserMenu");
             const button = document.getElementById("buttonPengguna");
             const arrow = document.getElementById("arrowUser");
-    
-        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-            dropdown.classList.add("hidden");
-            arrow.classList.remove("rotate-180");
-        }
-        });
-    
-        // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
-        document.querySelectorAll("#dropdownUserMenu li").forEach(item => {
-            item.addEventListener("click", function() {
-                const targetPage = this.getAttribute("data-href");
-            if (targetPage) {
-                window.location.href = targetPage; // Navigasi ke halaman
+
+            if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add("hidden");
+                arrow.classList.remove("rotate-180");
             }
         });
+
+        // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+        document.querySelectorAll("#dropdownUserMenu li").forEach(item => {
+            item.addEventListener("click", function () {
+                const targetPage = this.getAttribute("data-href");
+                if (targetPage) {
+                    window.location.href = targetPage; // Navigasi ke halaman
+                }
+            });
         });
-    
+
         // Fungsi toggle dropdown Pengajuan
         function toggleDropdownPengajuan() {
             const menu = document.getElementById("dropdownPengajuan");
             const arrow = document.getElementById("arrowPengajuan");
-    
+
             closeAllDropdowns("dropdownPengajuan");
-    
+
             menu.classList.toggle("hidden");
             arrow.classList.toggle("rotate-180");
         }
-    
-    // Menutup dropdown jika klik di luar elemen dropdown
-        document.addEventListener("click", function(event) {
+
+        // Menutup dropdown jika klik di luar elemen dropdown
+        document.addEventListener("click", function (event) {
             const dropdown = document.getElementById("dropdownPengajuan");
             const button = document.getElementById("buttonPengajuan");
             const arrow = document.getElementById("arrowPengajuan");
-    
-        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-            dropdown.classList.add("hidden");
-            arrow.classList.remove("rotate-180");
-        }
-    });
-    
-    // Fungsi menutup dropdown lain sebelum membuka dropdown yang baru
+
+            if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add("hidden");
+                arrow.classList.remove("rotate-180");
+            }
+        });
+
+        // Fungsi menutup dropdown lain sebelum membuka dropdown yang baru
         function closeAllDropdowns(exceptId) {
             const dropdowns = {
-            "dropdownUserMenu": "arrowUser",
-            "dropdownPengajuan": "arrowPengajuan"
-        };
-    
-        Object.keys(dropdowns).forEach((id) => {
-            if (id !== exceptId) {
-                const menu = document.getElementById(id);
-                const arrow = document.getElementById(dropdowns[id]);
-    
-                if (menu && !menu.classList.contains("hidden")) {
-                    menu.classList.add("hidden");
-                    arrow.classList.remove("rotate-180");
+                "dropdownUserMenu": "arrowUser",
+                "dropdownPengajuan": "arrowPengajuan"
+            };
+
+            Object.keys(dropdowns).forEach((id) => {
+                if (id !== exceptId) {
+                    const menu = document.getElementById(id);
+                    const arrow = document.getElementById(dropdowns[id]);
+
+                    if (menu && !menu.classList.contains("hidden")) {
+                        menu.classList.add("hidden");
+                        arrow.classList.remove("rotate-180");
+                    }
                 }
-            }
-        });
-    }
-    
-    // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
-        document.querySelectorAll("#dropdownPengajuan li").forEach(item => {
-            item.addEventListener("click", function() {
-                const targetPage = this.getAttribute("data-href");
-            if (targetPage) {
-                window.location.href = targetPage; // Navigasi ke halaman
-            }
-        });
-        });
-
-    //Fungsi dropdown edit fitur
-    function toggleDropdownEditFitur() {
-        const menu = document.getElementById("dropdownEditFitur");
-        const arrow = document.getElementById("arrowEditFitur");
-
-    // Pastikan hanya menutup dropdown lain
-    closeAllDropdowns("dropdownEditFitur");
-
-    menu.classList.toggle("hidden");
-    arrow.classList.toggle("rotate-180");
-    }
-
-    // Menutup dropdown jika klik di luar elemen dropdown
-    document.addEventListener("click", function(event) {
-        const dropdown = document.getElementById("dropdownEditFitur");
-        const button = document.getElementById("buttonEditFitur");
-        const arrow = document.getElementById("arrowEditFitur");
-
-    if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-        dropdown.classList.add("hidden");
-        arrow.classList.remove("rotate-180");
-    }
-    });
-
-    // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
-    document.querySelectorAll("#dropdownEditFitur li").forEach(item => {
-        item.addEventListener("click", function() {
-            const targetPage = this.getAttribute("data-href");
-        if (targetPage) {
-            window.location.href = targetPage; // Navigasi ke halaman
+            });
         }
-    });
-    });
-</script>
-    
+
+        // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+        document.querySelectorAll("#dropdownPengajuan li").forEach(item => {
+            item.addEventListener("click", function () {
+                const targetPage = this.getAttribute("data-href");
+                if (targetPage) {
+                    window.location.href = targetPage; // Navigasi ke halaman
+                }
+            });
+        });
+
+        //Fungsi dropdown edit fitur
+        function toggleDropdownEditFitur() {
+            const menu = document.getElementById("dropdownEditFitur");
+            const arrow = document.getElementById("arrowEditFitur");
+
+            // Pastikan hanya menutup dropdown lain
+            closeAllDropdowns("dropdownEditFitur");
+
+            menu.classList.toggle("hidden");
+            arrow.classList.toggle("rotate-180");
+        }
+
+        // Menutup dropdown jika klik di luar elemen dropdown
+        document.addEventListener("click", function (event) {
+            const dropdown = document.getElementById("dropdownEditFitur");
+            const button = document.getElementById("buttonEditFitur");
+            const arrow = document.getElementById("arrowEditFitur");
+
+            if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add("hidden");
+                arrow.classList.remove("rotate-180");
+            }
+        });
+
+        // Menangkap klik pada dropdown dan mengarahkan ke halaman terkait
+        document.querySelectorAll("#dropdownEditFitur li").forEach(item => {
+            item.addEventListener("click", function () {
+                const targetPage = this.getAttribute("data-href");
+                if (targetPage) {
+                    window.location.href = targetPage; // Navigasi ke halaman
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
